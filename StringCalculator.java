@@ -23,7 +23,9 @@ public class StringCalculator {
 			
 			return sum;
 		}
-		return 1;
+		else {
+			return Integer.parseInt(numbers);
+		}
 	}
 	private static String[] split(String numbers) {
 		return numbers.split(",");
