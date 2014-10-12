@@ -13,7 +13,7 @@ public class StringCalculator {
 		if (numbers.equals("")) {
 			return 0;
 		}
-		else if (numbers.contains(",")) {
+		else if (numbers.contains(",") || numbers.contains("/n")) {
 			String[] splitnumbers = split(numbers);
 			int sum = 0;
 			
@@ -28,7 +28,12 @@ public class StringCalculator {
 		}
 	}
 	private static String[] split(String numbers) {
-		return numbers.split(",");
+		String[] split = null;
+		for (int i = 0; i < numbers.length(); i++) {
+			if (numbers.contains(",")) split = numbers.split(",");
+			if (numbers.contains("/n")) split = numbers.split("/n");
+		}
+		return split;
 	}
 
 }
