@@ -6,6 +6,7 @@ import org.junit.Test;
 
 public class StringCalculatorTest {
 
+	// test cases for 1st Kata step
 	@Test
 	public void testEmptyString() {
 		assertEquals(0, StringCalculator.add(""));
@@ -25,5 +26,14 @@ public class StringCalculatorTest {
 	@Test
 	public void testTwoNumbers2() {
 		assertEquals(12, StringCalculator.add("6,6"));
+	}
+	// 2nd Kata step
+	@Test
+	public void testMultipleNumbers1() {
+		assertEquals(60, StringCalculator.add("10,20,30"));
+	}
+	@Test
+	public void testMultipleNumbers2() {
+		assertEquals(227, StringCalculator.add("5,32,6,54,85,39,1,2,3"));
 	}
 }
