@@ -36,4 +36,19 @@ public class StringCalculatorTest {
 	public void testMultipleNumbers2() {
 		assertEquals(227, StringCalculator.add("5,32,6,54,85,39,1,2,3"));
 	}
+	// 3rd Kata step
+	
+	@Test
+	public void testNewLineDelimiter() {
+		assertEquals(3, StringCalculator.add("1/n2"));
+	}
+	@Test
+	public void testNewlineDelimiter() {
+		assertEquals(60, StringCalculator.add("10/n20/n30"));
+	}
+	@Test
+	public void testNewlineAndComma() {
+		assertEquals(10, StringCalculator.add("3/n5,2"));
+	}
+	
 }
