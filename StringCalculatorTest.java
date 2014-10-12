@@ -1,7 +1,14 @@
 package stringcalc;
 
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
 public class StringCalculatorTest {
-	public static void main(String[] args) {
-	
+
+	@Test
+	public void testAdd() {
+		assertEquals(0, StringCalculator.add(""));
 	}
+
 }
