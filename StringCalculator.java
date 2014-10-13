@@ -29,10 +29,11 @@ public class StringCalculator {
 	}
 	private static String[] split(String numbers) {
 		String[] split = null;
-		for (int i = 0; i < numbers.length(); i++) {
-			if (numbers.contains(",")) split = numbers.split(",");
-			if (numbers.contains("/n")) split = numbers.split("/n");
-		}
+		
+			if (numbers.contains(",") && numbers.contains("/n")) split = numbers.split(("/n|\\,"));
+			else if (numbers.contains(",") && !(numbers.contains("/n"))) split = numbers.split(",");
+			else if (numbers.contains("/n") && !(numbers.contains(","))) split = numbers.split("/n");
+		
 		return split;
 	}
 
