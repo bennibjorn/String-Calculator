@@ -50,5 +50,13 @@ public class StringCalculatorTest {
 	public void testNewlineAndComma() {
 		assertEquals(10, StringCalculator.add("3/n5,2"));
 	}
+	@Test
+	public void testDifferentDelimiter() {
+		assertEquals(3, StringCalculator.add("//;\n1;2"));
+	}
+	@Test
+	public void testDifferentDelimiter2() {
+		assertEquals(6, StringCalculator.add("//;\n1;2;3"));
+	}
 	
 }
