@@ -58,5 +58,11 @@ public class StringCalculatorTest {
 	public void testDifferentDelimiter2() {
 		assertEquals(6, StringCalculator.add("//;\n1;2;3"));
 	}
-	
+	@Test
+	public void testNegatives1() {
+		assertEquals("Negatives not allowed: -2", StringCalculator.add("1,-2"));
+	}
+	public void testNegatives2() {
+		assertEquals("Negatives not allowed: -1, -4", StringCalculator.add("-1,2,3,-4"));
+	}
 }
