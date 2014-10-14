@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 import edu.princeton.cs.introcs.*;
 
 public class StringCalculator {
-
+//Starting over - the libs are being a pain in the ass...
 	public static void main(String[] args) {
 		String text = StdIn.readString();
 		StdOut.println(add(text));
